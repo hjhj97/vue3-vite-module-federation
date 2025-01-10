@@ -12,7 +12,7 @@ export default defineConfig({
       remotes: {
         remoteApp: "http://localhost:5001/assets/remoteEntry.js",
       },
-      shared: ["vue"],
+      shared: ["vue", "pinia"],
     }),
     topLevelAwait(),
   ],

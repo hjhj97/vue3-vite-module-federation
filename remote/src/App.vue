@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import RemoteButton from "./components/Button.vue";
+</script>
 
 <template>
-  <div>Remote</div>
+  <RemoteButton />
 </template>
