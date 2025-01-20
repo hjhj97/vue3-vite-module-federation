@@ -14,7 +14,7 @@ export default defineConfig({
       },
       shared: ["vue", "pinia"],
     }),
-    topLevelAwait(),
+    //topLevelAwait(),
   ],
   build: {
     modulePreload: false,
