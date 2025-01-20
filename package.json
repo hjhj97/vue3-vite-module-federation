@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "pnpm --stream --parallel run dev",
     "dev:host": "pnpm serve-main & pnpm preview-mfe",
+    "build": "pnpm --stream --parallel run build",
     "preview-mfe": "pnpm --parallel --filter=!host run build"
   },
   "keywords": [],
