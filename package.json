@@ -9,6 +9,7 @@
     "build": "pnpm --stream --parallel run build",
     "preview-mfe": "pnpm --parallel --filter=!host run build"
   },
+  "packageManager": "pnpm@9.1.0",
   "keywords": [],
   "author": "",
   "license": "ISC"
