@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import { useCountStore } from "remoteApp/Store";
+
+const msg = ref("hello");
 
 const countStore = useCountStore();
 const RemoteButton = defineAsyncComponent(() => import("remoteApp/Button"));
@@ -9,10 +11,11 @@ const RemoteButton = defineAsyncComponent(() => import("remoteApp/Button"));
 <template>
   <div class="container">
     <h1>I am Host</h1>
+    <input type="text" v-model="msg" />
     <h2>{{ countStore.count }}</h2>
     <button @click="countStore.addCount">Click</button>
   </div>
-  <RemoteButton />
+  <RemoteButton :msg="msg" />
 </template>
 <style scoped>
 .container {

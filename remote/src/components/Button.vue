@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { useCountStore } from "../stores";
 
+const props = defineProps<{
+  msg: string;
+}>();
 const countStore = useCountStore();
 </script>
 
 <template>
   <section class="container">
-    <h1>I am Remote</h1>
+    <h1>I am Remote - {{ props.msg }}</h1>
     <h2>{{ countStore.count }}</h2>
     <button @click="countStore.addCount">Click</button>
   </section>
