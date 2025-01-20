@@ -6,6 +6,10 @@ const msg = ref("hello");
 
 const countStore = useCountStore();
 const RemoteButton = defineAsyncComponent(() => import("remoteApp/Button"));
+
+const handleInput = (e: Event) => {
+  msg.value = (e.target as HTMLInputElement).value;
+};
 </script>
 
 <template>
@@ -15,7 +19,7 @@ const RemoteButton = defineAsyncComponent(() => import("remoteApp/Button"));
     <h2>{{ countStore.count }}</h2>
     <button @click="countStore.addCount">Click</button>
   </div>
-  <RemoteButton :msg="msg" />
+  <RemoteButton :msg="msg" @update:msg="handleInput" />
 </template>
 <style scoped>
 .container {
