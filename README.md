@@ -7,4 +7,5 @@
 - `vue 3.5.12`
 
 ## Demo
-![Demo](https://github.com/user-attachments/assets/20527218-46fa-4214-bae5-22efd5a5b402)
+
+![demo](https://github.com/user-attachments/assets/16105414-099e-49f0-a10e-7cfed17c57b7)
